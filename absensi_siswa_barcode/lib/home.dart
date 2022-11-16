@@ -1,3 +1,4 @@
+import 'package:absensi_siswa_barcode/akun_screen.dart';
 import 'package:absensi_siswa_barcode/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class _HomeState extends State<Home> {
   
   final _pageOptions = [
     HomeScreen(),
+    AkunScreen(),
     ];
   @override
   Widget build(BuildContext context) {
