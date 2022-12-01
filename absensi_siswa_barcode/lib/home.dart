@@ -1,6 +1,12 @@
 import 'package:absensi_siswa_barcode/akun_screen.dart';
 import 'package:absensi_siswa_barcode/home_screen.dart';
+import 'package:absensi_siswa_barcode/menuwidget.dart';
+import 'package:absensi_siswa_barcode/absensidetail.dart';
+import 'package:absensi_siswa_barcode/absensiitem.dart';
 import 'package:flutter/material.dart';
+import 'models/absensi.dart';
+
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -14,8 +20,10 @@ class _HomeState extends State<Home> {
   
   final _pageOptions = [
     HomeScreen(),
+    DetailAbsensiScreen(),
     AkunScreen(),
-    ];
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,9 +37,9 @@ class _HomeState extends State<Home> {
               label: 'Home'),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.feed,
+                Icons.photo_camera_back_rounded,
               ),
-              label: 'Absensi'),
+              label: 'History Absensi'),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.account_circle,
