@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:absensiswabarcode/Screens/Login/login_screen.dart';
-import 'package:absensiswabarcode/Screens/Signup/signup_screen.dart';
-import 'package:absensiswabarcode/Screens/Welcome/components/background.dart';
-import 'package:absensiswabarcode/components/rounded_button.dart';
-import 'package:absensiswabarcode/constants.dart';
+import 'package:absensi_siswa_barcode/Screens/Login/login_screen.dart';
+import 'package:absensi_siswa_barcode/Screens/Signup/signup_screen.dart';
+import 'package:absensi_siswa_barcode/Screens/Welcome/components/background.dart';
+import 'package:absensi_siswa_barcode/components/rounded_button.dart';
+import 'package:absensi_siswa_barcode/constants.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {

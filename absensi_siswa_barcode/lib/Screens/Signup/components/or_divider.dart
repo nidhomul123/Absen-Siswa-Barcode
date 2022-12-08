@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:absensiswabarcode/constants.dart';
+import 'package:absensi_siswa_barcode/constants.dart';
 
 class OrDivider extends StatelessWidget {
   @override

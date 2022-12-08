@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:absensiswabarcode/Screens/Signup/components/body.dart';
+import 'package:absensi_siswa_barcode/Screens/Signup/components/body.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
