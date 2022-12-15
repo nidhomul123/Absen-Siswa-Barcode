@@ -3,6 +3,7 @@ import 'package:absensi_siswa_barcode/home_screen.dart';
 import 'package:absensi_siswa_barcode/menuwidget.dart';
 import 'package:absensi_siswa_barcode/absensidetail.dart';
 import 'package:absensi_siswa_barcode/absensiitem.dart';
+import 'package:absensi_siswa_barcode/home_page.dart';
 import 'package:flutter/material.dart';
 import 'models/absensi.dart';
 
@@ -19,7 +20,7 @@ class _HomeState extends State<Home> {
   int selectedPage = 0;
   
   final _pageOptions = [
-    HomeScreen(),
+    HomePage(),
     DetailAbsensiScreen(),
     AkunScreen(),
   ];
