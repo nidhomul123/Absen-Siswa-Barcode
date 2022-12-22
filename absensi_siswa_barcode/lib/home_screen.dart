@@ -4,11 +4,12 @@ import 'package:absensi_siswa_barcode/bk_screen.dart';
 import 'package:absensi_siswa_barcode/home_screen.dart';
 import 'package:absensi_siswa_barcode/hospital_screen.dart';
 import 'package:absensi_siswa_barcode/menuwidget.dart';
+import 'package:absensi_siswa_barcode/models/absensi.dart';
 import 'package:absensi_siswa_barcode/scan_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, required Attendance Absensi});
 
   @override
   Widget build(BuildContext context) {
