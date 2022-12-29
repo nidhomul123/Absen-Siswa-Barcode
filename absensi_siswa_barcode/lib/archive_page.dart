@@ -61,7 +61,7 @@ class _HomePageState extends State<ArchivePage> {
                     ),
                     Center(
                       child: Text(
-                        'Archives',
+                        'Detail Riwayat',
                         style: TextStyle(
                             color: Colors.white70,
                             fontSize: 52,

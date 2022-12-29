@@ -14,8 +14,8 @@ class Task {
 
 List<Task> listTask = [
   Task(
-    'Olahraga',
-    'Senam 30 menit',
+    'Nidhomul Muna Lana',
+    'Kelas 12 Mipa 1',
     DateTime(2022, 9, 26, 7, 30),
     false,
   ),

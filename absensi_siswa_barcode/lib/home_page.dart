@@ -1,8 +1,10 @@
+import 'package:absensi_siswa_barcode/scan_qrcode.dart';
 import 'package:flutter/material.dart';
 import 'package:absensi_siswa_barcode/archive_page.dart';
 import 'package:absensi_siswa_barcode/models/task.dart';
 import 'package:absensi_siswa_barcode/widgets/card_widget.dart';
 import 'package:absensi_siswa_barcode/widgets/form_widget.dart';
+import 'package:absensi_siswa_barcode/scan_qrcode.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -184,11 +186,10 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showDialog(
-              context: context,
-              builder: (context) {
-                return const FormWidget();
-              });
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => ScanQrCode(),
+            ));
+            
         },
         backgroundColor: const Color(0xff2da9ef),
         foregroundColor: const Color(0xffffffff),
