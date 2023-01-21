@@ -20,6 +20,7 @@ const kPrimaryLightColor = Color(0xFFF1E6FF);
 const kMainColor = Color(0xff2470C7);
 const kBlueColor = Color(0xff2196F3);
 const kRedColor = Color(0xffFF0000);
+const kRed2Color = Color.fromARGB(255, 211, 2, 2);
 const kGreenColor = Color(0xff04D13A);
 
 TextStyle regularBlackTextStyle = GoogleFonts.poppins(

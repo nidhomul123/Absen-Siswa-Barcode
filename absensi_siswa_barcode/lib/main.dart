@@ -1,3 +1,4 @@
+import 'package:absensi_siswa_barcode/data/models/admin_local_model.dart';
 import 'package:absensi_siswa_barcode/data/models/settings_local_model.dart';
 import 'package:absensi_siswa_barcode/data/models/absence_local_model.dart';
 import 'package:absensi_siswa_barcode/data/models/user_local_model.dart';
@@ -14,10 +15,12 @@ void main() async {
   // Initialize hive
   await Hive.initFlutter();
   // Registering the adapter
+  Hive.registerAdapter(AdminLocalAdapter());
   Hive.registerAdapter(UserLocalAdapter());
   Hive.registerAdapter(AbsenceLocalAdapter());
   Hive.registerAdapter(SettingsLocalAdapter());
   // Opening the box
+  await Hive.openBox<AdminLocal>('admin');
   await Hive.openBox<UserLocal>('user');
   await Hive.openBox<AbsenceLocal>('absence');
   await Hive.openBox<SettingsLocal>('settings');

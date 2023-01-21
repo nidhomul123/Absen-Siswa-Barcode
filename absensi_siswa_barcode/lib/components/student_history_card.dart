@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 enum TimeInStatus {
   late,
-  notLate
+  notLate,
+  nothing
 }
 
 class StudentHistoryCard extends StatelessWidget {
@@ -47,7 +48,11 @@ class StudentHistoryCard extends StatelessWidget {
                 Text('MASUK : $timeIn', style: regularBlackTextStyle),
                 status == TimeInStatus.late ?
                 Text('TERLAMBAT', style: regularRedTextStyle) :
-                Text('TIDAK TERLAMBAT', style: regularGreenTextStyle),
+                (
+                  status == TimeInStatus.notLate ?
+                  Text('TIDAK TERLAMBAT', style: regularGreenTextStyle) :
+                  const Text('-')
+                ),
               ],
             ),
           ),

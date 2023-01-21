@@ -8,8 +8,8 @@ class AbsenceLocal extends HiveObject {
   late String qrCode;
 
   @HiveField(1)
-  late DateTime timeIn;
+  late DateTime? timeIn;
 
   @HiveField(2)
-  late DateTime timeOut;
+  late DateTime? timeOut;
 }

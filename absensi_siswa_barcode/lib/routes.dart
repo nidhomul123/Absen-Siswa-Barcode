@@ -16,13 +16,13 @@ final GoRouter router = GoRouter(
       path: '/',
       redirect: (context, state) async {
         SharedPreferences prefs = await SharedPreferences.getInstance();
-        String token = '';
-        if (prefs.containsKey('token')) {
-          token = prefs.getString('token') ?? '';
+        bool loginStatus = false;
+        if (prefs.containsKey('login_status')) {
+          loginStatus = prefs.getBool('login_status') ?? false;
         }
-        if (token.isNotEmpty) {
+        if (loginStatus) {
           // has session
-          return '/home';
+          return '/main';
         }
         return null;
       },

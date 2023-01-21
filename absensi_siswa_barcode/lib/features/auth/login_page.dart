@@ -1,7 +1,9 @@
 import 'package:absensi_siswa_barcode/components/widget.dart';
+import 'package:absensi_siswa_barcode/data/models/admin_local_model.dart';
 import 'package:absensi_siswa_barcode/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -14,6 +16,22 @@ class _LoginPageState extends State<LoginPage> {
 
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
+
+  var adminBox = Hive.box<AdminLocal>('admin');
+
+  @override
+  void initState() {
+    List<AdminLocal> adminList = adminBox.values.toList();
+    if (adminList.isEmpty) {
+      // insert
+      adminBox.add(
+        AdminLocal()
+        ..username = 'admin'
+        ..password = '12345678'
+      );
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

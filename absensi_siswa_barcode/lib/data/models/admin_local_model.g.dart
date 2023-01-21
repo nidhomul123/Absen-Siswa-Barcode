@@ -1,37 +1,34 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'absence_local_model.dart';
+part of 'admin_local_model.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class AbsenceLocalAdapter extends TypeAdapter<AbsenceLocal> {
+class AdminLocalAdapter extends TypeAdapter<AdminLocal> {
   @override
-  final int typeId = 1;
+  final int typeId = 3;
 
   @override
-  AbsenceLocal read(BinaryReader reader) {
+  AdminLocal read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return AbsenceLocal()
-      ..qrCode = fields[0] as String
-      ..timeIn = fields[1] as DateTime?
-      ..timeOut = fields[2] as DateTime?;
+    return AdminLocal()
+      ..username = fields[0] as String
+      ..password = fields[1] as String;
   }
 
   @override
-  void write(BinaryWriter writer, AbsenceLocal obj) {
+  void write(BinaryWriter writer, AdminLocal obj) {
     writer
-      ..writeByte(3)
-      ..writeByte(0)
-      ..write(obj.qrCode)
-      ..writeByte(1)
-      ..write(obj.timeIn)
       ..writeByte(2)
-      ..write(obj.timeOut);
+      ..writeByte(0)
+      ..write(obj.username)
+      ..writeByte(1)
+      ..write(obj.password);
   }
 
   @override
@@ -40,7 +37,7 @@ class AbsenceLocalAdapter extends TypeAdapter<AbsenceLocal> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is AbsenceLocalAdapter &&
+      other is AdminLocalAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
